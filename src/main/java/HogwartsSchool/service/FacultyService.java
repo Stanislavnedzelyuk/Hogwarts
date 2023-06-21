@@ -34,6 +34,7 @@ public class FacultyService {
         return faculty;
     }
 
+
     public void delete(Long id) {
         faculties.remove(id);
     }
