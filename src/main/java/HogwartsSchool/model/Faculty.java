@@ -14,7 +14,6 @@ public class Faculty {
     }
 
 
-
     public long getId() {
         return id;
     }

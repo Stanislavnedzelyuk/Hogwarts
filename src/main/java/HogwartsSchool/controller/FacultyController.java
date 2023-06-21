@@ -35,7 +35,6 @@ public class FacultyController {
         return ResponseEntity.ok(facultyService.update(id, name, color));
     }
 
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         facultyService.delete(id);

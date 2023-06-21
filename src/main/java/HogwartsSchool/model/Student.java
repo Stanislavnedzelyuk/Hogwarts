@@ -43,7 +43,6 @@ public class Student {
         if (!(o instanceof Student student)) return false;
         return getAge() == student.getAge() && Objects.equals(getId(), student.getId()) && Objects.equals(getName(), student.getName());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getName(), getAge());
