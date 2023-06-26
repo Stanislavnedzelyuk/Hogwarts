@@ -1,6 +1,8 @@
 package HogwartsSchool.service;
 
 import HogwartsSchool.model.Student;
+import HogwartsSchool.repository.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -10,7 +12,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class StudentService {
+    private final StudentRepository studentRepository;
 
+    @Autowired
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
     private final Map<Long, Student> students = new HashMap<>();
     private Long idCounter = 1L;
 
